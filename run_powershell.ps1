@@ -1,0 +1,1 @@
+Start-Process powershell.exe -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File .\first_powershell_VM or PM.ps1" -WindowStyle Hidden
