@@ -7,7 +7,7 @@ $webhookUrlPM = "https://webexapis.com/v1/webhooks/incoming/webex webhook ID"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 
-$LastPMSession = Get-VBRComputerBackupJobSession | Sort-Object CreationTime -Descending | Select-Object -First 1
+$LastPMSession = Get-VBRComputerBackupJobSession | Sort-Object EndTime -Descending | Select-Object -First 1
 
 
 $PBackup_job_name = (Get-VBRComputerBackupJob | Where-Object {$_.Id -eq $LastPMSession.JobId}).Name
